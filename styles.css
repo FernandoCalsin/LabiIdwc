@@ -22,3 +22,8 @@ section
 {
     align-self: center;
 }
+ul
+{
+    list-style-type: none;
+    padding: 0;
+}
