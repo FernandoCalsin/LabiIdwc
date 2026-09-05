@@ -27,3 +27,9 @@ ul
     list-style-type: none;
     padding: 0;
 }
+.imagen-fija
+{
+    position:fixed;
+    bottom: 35px;
+    right: 50%; z-index: index 1000;
+}
