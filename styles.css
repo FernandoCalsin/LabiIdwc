@@ -29,9 +29,10 @@ ul
 }
 .imagen-fija
 {
-    position:fixed;
-    bottom: 35px;
-    right: 50px; z-index: index 1000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid rgb(217, 255, 0); 
 }
 #tecnologias
 {
