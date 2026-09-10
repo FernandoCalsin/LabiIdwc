@@ -19,10 +19,553 @@
             </nav>            
         </header>
         <main>
+          <style>
 
-        </main>
-        <footer>
-            <p>© 2026 Luis Fernando. Todos los derechos reservados</p>
-        </footer>
-    </body>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           ENCABEZADO
+           ========================= */
+
+        header {
+            background-color: #263238;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: auto;
+            color: #d7dee2;
+        }
+
+        /* =========================
+           NAVEGACIÓN
+           ========================= */
+
+        nav {
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #263238;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #1565c0;
+        }
+
+        /* =========================
+           CONTENEDOR PRINCIPAL
+           ========================= */
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section > h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #263238;
+        }
+
+        /* =========================
+           TARJETAS
+           ========================= */
+
+        .contenedor-formatos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .tarjeta h3 {
+            color: #1565c0;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta h4 {
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           EJEMPLO SVG
+           ========================= */
+
+        .ejemplo-svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f3f4;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        pre {
+            background-color: #263238;
+            color: #eeeeee;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #263238;
+            color: white;
+        }
+
+        .conclusion {
+            background-color: white;
+            padding: 30px;
+            border-left: 5px solid #1565c0;
+            border-radius: 8px;
+        }
+
+
+        footer {
+            background-color: #263238;
+            color: #d7dee2;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+
+        @media (max-width: 750px) {
+
+            .contenedor-formatos {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Estándares y formatos del entorno Web</h1>
+
+        <p>
+            Introducción a PNG, SVG, OGG y XML y su importancia
+            dentro del desarrollo y funcionamiento de la Web.
+        </p>
+
+    </header>
+
+
+
+    <nav>
+
+        <a href="#introduccion">Introducción</a>
+        <a href="#formatos">Formatos</a>
+        <a href="#comparacion">Comparación</a>
+        <a href="#conclusion">Conclusión</a>
+
+    </nav>
+
+    <main>
+
+        <section id="introduccion">
+
+            <h2>Introducción</h2>
+
+            <p>
+                El entorno Web está compuesto por diferentes tecnologías,
+                formatos y estándares que permiten crear, transmitir y
+                presentar información a través de Internet. Entre ellos
+                encontramos formatos destinados a imágenes, gráficos,
+                audio y almacenamiento estructurado de información.
+            </p>
+
+            <p>
+                En este apartado se presentan cuatro tecnologías relevantes:
+                PNG, SVG, OGG y XML. Cada una posee características y
+                objetivos diferentes, pero todas pueden encontrarse
+                relacionadas con el desarrollo de aplicaciones y contenidos
+                para la Web.
+            </p>
+
+        </section>
+
+
+        <section id="formatos">
+
+            <h2>Formatos y tecnologías</h2>
+
+            <div class="contenedor-formatos">
+
+
+                <article class="tarjeta">
+
+                    <h3>1. PNG</h3>
+
+                    <p>
+                        <strong>PNG (Portable Network Graphics)</strong>
+                        es un formato de imagen digital diseñado para
+                        almacenar imágenes mediante compresión sin pérdida
+                        de información.
+                    </p>
+
+                    <h4>Características</h4>
+
+                    <ul>
+                        <li>Utiliza compresión sin pérdida.</li>
+                        <li>Permite utilizar transparencia.</li>
+                        <li>Conserva buena calidad de imagen.</li>
+                        <li>Es ampliamente utilizado en la Web.</li>
+                    </ul>
+
+                    <h4>Uso en HTML</h4>
+
+                    <pre><code>&lt;img
+    src="imagen.png"
+    alt="Imagen de ejemplo"
+    width="300"&gt;</code></pre>
+
+                    <p>
+                        La etiqueta <code>&lt;img&gt;</code> permite
+                        insertar una imagen PNG dentro de una página web.
+                    </p>
+
+                </article>
+
+
+                <!-- =========================
+                     SVG
+                     ========================= -->
+
+                <article class="tarjeta">
+
+                    <h3>2. SVG</h3>
+
+                    <p>
+                        <strong>SVG (Scalable Vector Graphics)</strong>
+                        es un formato basado en XML utilizado para
+                        representar gráficos vectoriales.
+                    </p>
+
+                    <h4>Características</h4>
+
+                    <ul>
+                        <li>Puede ampliarse sin perder calidad.</li>
+                        <li>Está basado en XML.</li>
+                        <li>Puede escribirse directamente en HTML.</li>
+                        <li>Es útil para iconos, diagramas y gráficos.</li>
+                    </ul>
+
+
+                    <h4>Ejemplo visual</h4>
+
+                    <div class="ejemplo-svg">
+
+                        <svg
+                            width="200"
+                            height="120"
+                            viewBox="0 0 200 120"
+                            aria-label="Ejemplo de gráfico SVG">
+
+                            <circle
+                                cx="100"
+                                cy="60"
+                                r="45"
+                                fill="lightblue"
+                                stroke="black"
+                                stroke-width="3">
+                            </circle>
+
+                        </svg>
+
+                    </div>
+
+
+                    <h4>Uso en HTML</h4>
+
+                    <pre><code>&lt;svg width="200" height="120"&gt;
+
+    &lt;circle
+        cx="100"
+        cy="60"
+        r="45"&gt;
+
+    &lt;/circle&gt;
+
+&lt;/svg&gt;</code></pre>
+
+                </article>
+
+
+                <!-- =========================
+                     OGG
+                     ========================= -->
+
+                <article class="tarjeta">
+
+                    <h3>3. OGG</h3>
+
+                    <p>
+                        <strong>OGG</strong> es un formato contenedor
+                        multimedia abierto desarrollado originalmente
+                        por la organización Xiph.Org. Puede utilizarse
+                        para almacenar y transmitir contenido multimedia,
+                        especialmente audio.
+                    </p>
+
+                    <h4>Características</h4>
+
+                    <ul>
+                        <li>Es un formato abierto.</li>
+                        <li>Puede utilizarse para contenido multimedia.</li>
+                        <li>Es compatible con HTML5 mediante elementos multimedia.</li>
+                        <li>Puede contener audio codificado con diferentes códecs.</li>
+                    </ul>
+
+                    <h4>Uso en HTML</h4>
+
+                    <pre><code>&lt;audio controls&gt;
+
+    &lt;source
+        src="audio.ogg"
+        type="audio/ogg"&gt;
+
+    Tu navegador no admite
+    este formato.
+
+&lt;/audio&gt;</code></pre>
+
+                    <p>
+                        El atributo <code>controls</code> permite mostrar
+                        los controles para reproducir el contenido de audio.
+                    </p>
+
+                </article>
+
+
+                <!-- =========================
+                     XML
+                     ========================= -->
+
+                <article class="tarjeta">
+
+                    <h3>4. XML</h3>
+
+                    <p>
+                        <strong>XML (Extensible Markup Language)</strong>
+                        es un lenguaje de marcado diseñado para almacenar,
+                        organizar y transportar información estructurada.
+                    </p>
+
+                    <h4>Características</h4>
+
+                    <ul>
+                        <li>Permite estructurar información.</li>
+                        <li>Utiliza etiquetas definidas por el usuario.</li>
+                        <li>Es legible tanto para personas como para programas.</li>
+                        <li>SVG utiliza XML como base.</li>
+                    </ul>
+
+                    <h4>Ejemplo XML</h4>
+
+                    <pre><code>&lt;alumno&gt;
+
+    &lt;nombre&gt;Juan&lt;/nombre&gt;
+
+    &lt;curso&gt;
+        Desarrollo Web
+    &lt;/curso&gt;
+
+    &lt;semestre&gt;III&lt;/semestre&gt;
+
+&lt;/alumno&gt;</code></pre>
+
+                    <p>
+                        En este ejemplo, XML permite organizar los datos
+                        de un estudiante mediante una estructura jerárquica.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="comparacion">
+
+            <h2>Comparación de los formatos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Formato</th>
+                        <th>Significado</th>
+                        <th>Principal utilización</th>
+                        <th>Tipo de contenido</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>PNG</td>
+                        <td>Portable Network Graphics</td>
+                        <td>Imágenes</td>
+                        <td>Gráfico rasterizado</td>
+                    </tr>
+
+                    <tr>
+                        <td>SVG</td>
+                        <td>Scalable Vector Graphics</td>
+                        <td>Gráficos e ilustraciones</td>
+                        <td>Gráfico vectorial</td>
+                    </tr>
+
+                    <tr>
+                        <td>OGG</td>
+                        <td>Formato multimedia abierto</td>
+                        <td>Audio y multimedia</td>
+                        <td>Multimedia</td>
+                    </tr>
+
+                    <tr>
+                        <td>XML</td>
+                        <td>Extensible Markup Language</td>
+                        <td>Datos estructurados</td>
+                        <td>Texto estructurado</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             CONCLUSIÓN
+             ========================= -->
+
+        <section id="conclusion">
+
+            <h2>Conclusión</h2>
+
+            <div class="conclusion">
+
+                <p>
+                    El conocimiento de diferentes estándares y formatos
+                    permite comprender mejor el funcionamiento del entorno
+                    Web. PNG proporciona una alternativa adecuada para el
+                    almacenamiento de imágenes con buena calidad y
+                    transparencia; SVG permite crear gráficos vectoriales
+                    escalables; OGG proporciona una alternativa abierta
+                    para contenido multimedia; y XML permite representar
+                    información de manera estructurada.
+                </p>
+
+                <br>
+
+                <p>
+                    Aunque cada tecnología tiene un propósito diferente,
+                    todas pueden contribuir al desarrollo de contenidos y
+                    aplicaciones Web. Comprender sus características y
+                    formas de utilización permite a los estudiantes de
+                    Ingeniería de Sistemas desarrollar páginas más
+                    estructuradas y comprender mejor la relación entre
+                    los diferentes componentes que forman parte del
+                    entorno Web.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Desarrollo Web — Ingeniería de Sistemas
+        </p>
+
+        <p>
+            Estándares y tecnologías del entorno Web
+        </p>
+
+    </footer>
+
+</body>
+
 </html>
+        
