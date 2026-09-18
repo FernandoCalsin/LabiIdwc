@@ -9,13 +9,44 @@
     </head>
     <body>
         <form action="/procesar" method="post" class="form-container">
+            <h1>Registro de Nuevos Estudiantes</h1>
             <fieldset>
-                <legend>Datos de Acceso</legend>
+                <legend>Informacion Personal</legend>
+
                 <div class="form-group">
-                    <label for="email" class="form-label">Correo Institucional:</label>
-                    <input type="email" id="email" name="email" class="form-input" required placeholder="usuario@universidad.edu.pe">
+                    <label for="nombre" class="form-label">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-input" required placeholder="pedro garcia">
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-input" min="1900-01-01" max="2026-09-18" required>
+                </div>
+                 
+                <div class="form-gropu">
+                    <label for="carrera" class="form-label">Carrera</label>
+                    <select id="carrera" name="carrera" class="form-select" required>
+                        <option value"" disabled selected>seleccione una carrera</option>
+                        <option value="Ingenieria_sistemas">ingenieria de sistemas</option>
+                        <option value="Ingenieria_Industrial">ingenieria industrial</option>
+                        <option valuea="administracion">administracion de empresas</option>
+                        <option value="derecho">derecho</option>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Turno de estudio</label>
+                    <div>
+                        <input type="radio" id="turno_manana" name="turno" value="mañana" required>
+                        <label for="turno_manana">mañana</label>
+
+                        <input type="radio" id="turno_tarde" name="turno" value="tarde" required>
+                        <label for="turno_tarde">tarde</label>
+
+                        <input type="radio" id="turno_nochea" name="turno" value="noche" required>
+                        <label for="turno_noche">noche</label>
+                    </div>
                 </div>
             </fieldset>
+            
         </form>
     </body>
 </html>
