@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Laboratorio 2</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-<!--bloque de informacion personal-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Envoltura tipo tarjeta para centrar según la guía -->
+    <main class="card">
         <form action="/procesar" method="post" class="form-container">
             <h1>Registro de Nuevos Estudiantes</h1>
+            
+            <!-- Bloque de información personal -->
             <fieldset>
-                <legend>Informacion Personal</legend>
-<!--nombre completo-->
+                <legend>Información Personal</legend>
+                
+                <!-- Nombre completo -->
                 <div class="form-group">
                     <label for="nombre" class="form-label">Nombre Completo:</label>
                     <input type="text" id="nombre" name="nombre" class="form-input" required placeholder="pedro garcia">
                 </div>
-<!--fecha de nacimmiento-->
+
+                <!-- Fecha de nacimiento -->
                 <div class="form-group">
                     <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento:</label>
                     <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-input" min="1900-01-01" max="2026-09-18" required>
                 </div>
-<!--carrera profesional-->              
-                <div class="form-gropu">
+
+                <!-- Carrera profesional -->
+                <div class="form-group">
                     <label for="carrera" class="form-label">Carrera</label>
                     <select id="carrera" name="carrera" class="form-select" required>
-                        <option value"" disabled selected>seleccione una carrera</option>
+                        <option value="" disabled selected>seleccione una carrera</option>
                         <option value="Ingenieria_sistemas">ingenieria de sistemas</option>
                         <option value="Ingenieria_Industrial">ingenieria industrial</option>
-                        <option valuea="administracion">administracion de empresas</option>
+                        <option value="administracion">administracion de empresas</option>
                         <option value="derecho">derecho</option>
+                    </select>
                 </div>
-<!--turno de estudio-->
+
+                <!-- Turno de estudio -->
                 <div class="form-group">
                     <label class="form-label">Turno de estudio</label>
                     <div>
@@ -43,49 +51,55 @@
                         <input type="radio" id="turno_tarde" name="turno" value="tarde" required>
                         <label for="turno_tarde">tarde</label>
 
-                        <input type="radio" id="turno_nochea" name="turno" value="noche" required>
+                        <input type="radio" id="turno_noche" name="turno" value="noche" required>
                         <label for="turno_noche">noche</label>
                     </div>
                 </div>
-<!--comentarios-->
+
+                <!-- Comentarios -->
                 <div class="form-group">
                     <label for="comentarios" class="form-label">comentarios</label>
                     <textarea id="comentarios" name="comentarios" class="form-textarea" rows="4" placeholder="Ingrese un comentario..."></textarea>
                 </div>
             </fieldset>
-<!--bloque de informacion de la cuenta-->
+
+            <!-- Bloque de información de la cuenta -->
             <fieldset>
-                <legend>Informacion de la cuenta</legend>
-<!--codigo de estudiantee-->
+                <legend>Información de la cuenta</legend>
+
+                <!-- Código de estudiante -->
                 <div class="form-group">
                     <label for="codigo" class="form-label">codigo de estudiante</label>
                     <input type="text" id="codigo" name="codigo" class="form-input"
                     pattern="[0-9]{8}" title="ingresar maximo 8 dijitos" required placeholder="12345678">
                 </div>
-<!--correo institucional-->
+
+                <!-- Correo institucional -->
                 <div class="form-group">
                     <label for="email" class="form-label">correo electronico:</label>
                     <input type="email" id="email" name="email" class="form-input" required placeholder="usuario@universidad.edu.pe">
-                    
                 </div>
-<!--contraseña-->
+
+                <!-- Contraseña -->
                 <div class="form-group">
-                    <label for="pasword" class="form-label">contraseña:</label>
+                    <label for="password" class="form-label">contraseña:</label>
                     <input type="password" id="password" name="password" class="form-input"
                     pattern="(?=.*\d)(?=.*[A-Z]).{8,}" title="contraseña deve tener 8 caracteres minimo una letra mayuscula y un numero" required>
                 </div>
-<!--aceptar terminos-->
+
+                <!-- Aceptar términos -->
                 <div class="form-group">
                     <input type="checkbox" id="terminos" name="terminos" required>
                     <label for="terminos">acepto los terminos y condiciones</label>
                 </div>
             </fieldset>
-<!--botones-->
+
+            <!-- Botones -->
             <div class="form-group">
                 <button type="submit" class="btn-submit">registrar estudiante</button>
                 <button type="reset" class="btn-reset">limpiar formulario</button>
             </div>
-            
         </form>
-    </body>
+    </main>
+</body>
 </html>
