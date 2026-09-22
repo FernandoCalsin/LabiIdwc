@@ -1,0 +1,28 @@
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-texto, 
+.hero-imagen {
+    width: 100%;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 992px) {
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-texto, 
+    .hero-imagen {
+        width: 48%;
+    }
+}
