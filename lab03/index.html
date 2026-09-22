@@ -65,10 +65,40 @@
             </div>
         </section>
 
-        <!-- 4. Contenedor para Noticias y Eventos -->
-        <section class="noticias-section">
-
+        <section id="noticias" class="noticias-section py-4">
+            <h2 class="text-center mb-4">Noticias y Eventos</h2>
+            <div class="row g-4" id="contenedor-noticias">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Hackathon Académica 2026</h5>
+                            <p class="card-text">Participa en la maratón de desarrollo web y demuestra tus habilidades maquetando en equipo.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNoticia">Más información</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- [Agregar tarjetas de noticias] -->
+            </div>
         </section>
+
+    </main>
+
+    <div class="modal fade" id="modalNoticia" tabindex="-1" aria-labelledby="modalNoticiaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNoticiaLabel">Detalles de la Noticia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Inscripciones abiertas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </main>
 
