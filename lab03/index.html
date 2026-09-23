@@ -43,12 +43,12 @@
     <!-- Contenido Principal -->
     <main class="container my-4">
         
-        <!-- 2. Hero Section -->
+        <!-- 2. Hero Section (Flexbox) -->
         <section class="hero-section py-4">
             <div class="hero-texto">
                 <h1 class="display-5 fw-bold">Bienvenido al Portal Académico</h1>
                 <p class="lead text-secondary">
-                    Explora nuestra plataforma Web.
+                    Explora nuestra plataforma Web y potencia tus habilidades tecnológicas.
                 </p>
                 <a href="#catalogo" class="btn btn-primary btn-lg mt-2">Ver Cursos</a>
             </div>
@@ -57,7 +57,7 @@
             </div>
         </section>
 
-        <!-- 3. Catálogo de Cursos -->
+        <!-- 3. Catálogo de Cursos (CSS Grid - 6 Tarjetas) -->
         <section id="catalogo" class="catalogo-section my-5">
             <h2 class="text-center mb-4">Catálogo de Cursos Ofertados</h2>
             <div class="card-grid">
@@ -71,24 +71,69 @@
                     <h3>JavaScript Moderno</h3>
                     <p>Domina ES6+, manipulación del DOM y programación asíncrona.</p>
                 </div>
-                <!-- [Agregar tarjetas 3, 4, 5 y 6] -->
+                <!-- Tarjeta 3 -->
+                <div class="course-card">
+                    <h3>Bootstrap 5</h3>
+                    <p>Diseña interfaces responsivas y adaptables rápidamente.</p>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="course-card">
+                    <h3>React Native</h3>
+                    <p>Desarrolla aplicaciones móviles multiplataforma nativas.</p>
+                </div>
+                <!-- Tarjeta 5 -->
+                <div class="course-card">
+                    <h3>Node.js & Express</h3>
+                    <p>Crea servidores web robustos y APIs RESTful escalables.</p>
+                </div>
+                <!-- Tarjeta 6 -->
+                <div class="course-card">
+                    <h3>Bases de Datos SQL</h3>
+                    <p>Diseña y gestiona bases de datos relacionales eficientes.</p>
+                </div>
             </div>
         </section>
 
         <!-- 4. Noticias y Eventos -->
-        <section id="noticias" class="noticias-section py-4">
+        <section id="noticias" class="noticias-section py-5">
             <h2 class="text-center mb-4">Noticias y Eventos</h2>
             <div class="row g-4" id="contenedor-noticias">
+                <!-- Noticia 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Hackathon Académica 2026</h5>
-                            <p class="card-text">Participa en la maratón de desarrollo web y demuestra tus habilidades maquetando en equipo.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNoticia">Más información</button>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title">Hackathon Académica 2026</h5>
+                                <p class="card-text">Participa en la maratón de desarrollo web y demuestra tus habilidades maquetando en equipo.</p>
+                            </div>
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalNoticia">Más información</button>
                         </div>
                     </div>
                 </div>
-                <!-- [Agregar noticias] -->
+                <!-- Noticia 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title">Taller de UX/UI Design</h5>
+                                <p class="card-text">Aprende las mejores prácticas para diseñar interfaces centradas en la experiencia del usuario.</p>
+                            </div>
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalNoticia">Más información</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Noticia 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title">Inicio de Inscripciones</h5>
+                                <p class="card-text">Abre el período de matriculación para los nuevos cursos especializados del semestre.</p>
+                            </div>
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalNoticia">Más información</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -103,7 +148,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Inscripciones abiertas.</p>
+                    <p>Inscripciones abiertas. Dirígete a la coordinación académica o completa el formulario en línea para registrarte.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
